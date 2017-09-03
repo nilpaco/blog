@@ -1,4 +1,4 @@
-# fgc-pwa
+# blog
 
 > A Vue.js project
 

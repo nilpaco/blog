@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span>FGC</span>
+      <span>blog</span>
     </header>
     <main>
       <img src="./assets/logo.png" alt="Vue.js PWA">

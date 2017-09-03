@@ -1,50 +1,42 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <select v-model="selected">
-      <option disabled value="">Please select one</option>
-      <option v-for="station in stations" v-bind:value="station.id" v-bind:key="station.id">{{ station.name }}</option>
-    </select>
-    <select v-model="selected2">
-      <option disabled value="">Please select one</option>
-      <option v-for="station in stations" v-bind:value="station.id" v-bind:key="station.id">{{ station.name }}</option>
-    </select>
-    <span>Selected: {{ selected }} {{ selected2 }}</span>
+    <h2>Essential Links</h2>
+    <div id="example-1" v-for="post in posts">
+      <h2>
+        {{ post.title }}
+      </h2>
+      <p>{{ post.message }}</p>
+    </div>
   </div>
 </template>
 
 <script>
+
+import { db } from './../firebase'
+
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js PWA',
-      selected: '',
-      selected2: '',
-      stations: []
+      msg: 'Welcome to Your Vue.js PWA'
     }
   },
-  methods: {
-    getStations: function () {
-      let url = 'http://barcelonaapi.marcpous.com/fgc/stations.json'
-      this.$http.get(url).then((repsonse) => {
-        this.stations = repsonse.body.data.fgc
-        console.log(this.stations)
-      }, reposen => {
-        // error
-      })
+  firebase: {
+    posts: {
+      source: db.ref('posts'),
+      // Optional, allows you to handle any errors.
+      cancelCallback (err) {
+        console.error(err)
+      }
     }
-  },
-  created () {
-    this.getStations()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1,
-h2 {
+h1, h2 {
   font-weight: normal;
 }
 
