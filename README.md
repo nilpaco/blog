@@ -1,4 +1,6 @@
-# fgc-pwa
+# fgc-pwa [![Build Status](https://travis-ci.org/nilpaco/fgc-app.svg?branch=master)](https://travis-ci.org/nilpaco/blog)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/nilpaco/blog.svg)](https://greenkeeper.io/)
 
 > A Vue.js project
 
