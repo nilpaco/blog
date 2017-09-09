@@ -1,6 +1,6 @@
 {
-  "name": "fgc-pwa",
-  "short_name": "fgc-pwa",
+  "name": "blog",
+  "short_name": "blog",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",

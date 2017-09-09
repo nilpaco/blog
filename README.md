@@ -1,4 +1,4 @@
-# fgc-pwa [![Build Status](https://travis-ci.org/nilpaco/fgc-app.svg?branch=master)](https://travis-ci.org/nilpaco/blog)
+# blog [![Build Status](https://travis-ci.org/nilpaco/fgc-app.svg?branch=master)](https://travis-ci.org/nilpaco/blog)
 
 > A Vue.js project
 
